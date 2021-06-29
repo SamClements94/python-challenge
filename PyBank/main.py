@@ -44,18 +44,18 @@ print("Financial Analysis")
 print("_________________________")
 print(f"Total Months: {date}")
 print (f"Total: ${total_profit_losses}")
-print(f"Average Change: {average_change}")
+print(f"Average Change: ${average_change}")
 print(f"Greatest Increase in Profits: {greatest_increase_date} {greatest_increase}")
 print(f"Greatest Decrease in Profits: {greatest_decrease_date} {greatest_decrease}")
 
 file_name = "budget.txt"
-with open(file_name, "w") as txt_file:
+with open(os.path.join("Analysis",file_name), "w") as txt_file:
 
     txt_file.write("Financial Analysis\n")
     txt_file.write("_________________________\n")
     txt_file.write(f"Total Months: {date}\n")
     txt_file.write(f"Total: ${total_profit_losses}\n")
-    txt_file.write(f"Average Change: {average_change}\n")
+    txt_file.write(f"Average Change: ${average_change}\n")
     txt_file.write(f"Greatest Increase in Profits: {greatest_increase_date} {greatest_increase}\n")
     txt_file.write(f"Greatest Decrease in Profits: {greatest_decrease_date} {greatest_decrease}\n")
     
